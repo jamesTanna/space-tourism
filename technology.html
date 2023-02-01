@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url('/assets/crew/background-crew-desktop.jpg')
+        }
+        @media(max-width:1280px){
+            body{
+                background-image: url('/assets/crew/background-crew-tablet.jpg');
+            }
+        }
+        @media(max-width:728px) {
+            body{
+                background-image: url('/assets/crew/background-crew-mobile.jpg');
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+            <img src="./assets/shared/logo.svg" alt="" id="logo">
+            <hr>
+            <ul id="nav">
+                <li class="nav-link">
+                    <span>00</span>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-link">
+                    <span>01</span>
+                    <a href="destination.html">Destination</a>
+                </li>
+                <li class="nav-link">
+                    <span>02</span>
+                    <a href="crew.html">Crew</a>
+                </li>
+                <li class="nav-link">
+                    <span>03</span>
+                    <a href="technology.html">Technology</a>
+                </li>
+            </ul>
+            <img id="hamburg" src="/assets/shared/icon-hamburger.svg" alt="">
+
+        </header>
+        <nav>
+            <ul class="nav">
+                <li class="nav-link">
+                    <span>00</span>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-link">
+                    <span>01</span>
+                    <a href="destination.html">Destination</a>
+                </li>
+                <li class="nav-link">
+                    <span>02</span>
+                    <a href="crew.html">Crew</a>
+                </li>
+                <li class="nav-link">
+                    <span>03</span>
+                    <a href="#">Technology</a>
+                </li>
+            </ul>
+        </nav>
+    <h3 id="heading">03 Space launch 101</h3>
+    <ul id="nums">
+        <li class="num">1</li>
+        <li class="num">2</li>
+        <li class="num">3</li>
+    </ul>
+    <section id="tech-cards">
+    <div class="card">
+        <div class="card-header">
+            <h4>The terminology...<br>
+            Launch vehicle</h4>
+            <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="">
+        </div>
+        <p>
+          A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+          payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+          WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+          it's quite an awe-inspiring sight on the launch pad!
+         </p>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h4>The terminology...<br>
+                Spaceport</h4>
+            <img src="./assets/technology/image-spaceport-landscape.jpg" alt="">
+        </div>
+        <p>
+        A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.        
+        </p>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h4>The terminology...<br>
+                Space capsule</h4>
+            <img src="./assets/technology/image-space-capsule-landscape.jpg" alt="">
+        </div>
+        <p>
+            A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
+        </p>
+    </div>
+    </section>
+    <script src="DOM.js"></script>
+    <script>
+        let hamburg = element('#hamburg');
+        let nav = element('nav');
+        hamburg.addEventListener('click', () => {
+            if (nav.style.display == 'none') {
+                setDisplay(nav, 'block')
+            } else {
+                hide(nav);
+            }
+        })
+    </script>
+</body>
+
+</html>

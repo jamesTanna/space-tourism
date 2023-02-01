@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url('/assets/destination/background-destination-desktop.jpg');
+        }
+        @media(max-width:1280px){
+            body{
+                background-image: url('/assets/destination/background-destination-tablet.jpg');
+            }
+        }
+        @media(max-width:780px){
+            body{
+                background-image: url('/assets/destination/background-destination-mobile.jpg');
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+                <img src="./assets/shared/logo.svg" alt="" id="logo">
+                <hr>
+                <ul id="nav">
+                    <li class="nav-link">
+                        <span>00</span>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>01</span>
+                        <a href="destination.html">Destination</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>02</span>
+                        <a href="crew.html">Crew</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>03</span>
+                        <a href="technology.html">Technology</a>
+                    </li>
+                    
+                </ul>
+                <img id="hamburg" src="/assets/shared/icon-hamburger.svg" alt="">
+            </header>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-link">
+                        <span>00</span>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>01</span>
+                        <a href="#">Destination</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>02</span>
+                        <a href="crew.html">Crew</a>
+                    </li>
+                    <li class="nav-link">
+                        <span>03</span>
+                        <a href="technology.html">Technology</a>
+                    </li>
+                </ul>
+            </nav>
+    <div class="destination-container">
+        <h3>Pick you destination</h3>
+        <ul id="accordion">
+            <li class="accordion-item" id="Moon">
+                Moon
+                <img class="img"  src="./assets/shared/icon-hamburger.svg" alt="">
+            </li>
+            <div class="output" id="moon-output">
+                <h3>Moon</h3>
+                <br>
+                <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+                regain perspective and come back refreshed. While you’re there, take in some history
+                by visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+                <br>
+                <p>
+                Avg. distance
+                384,400 km
+                </p>
+                <br>
+                <p>
+                Est. travel time
+                3 days
+                </p>
+                <br>
+            </div>
+            <li class="accordion-item" id="Mars">
+                Mars
+                <img class="img"  src="./assets/shared/icon-hamburger.svg" alt="">
+            </li>
+            <div class="output" id="mars-output">
+                <h3>Mars</h3>
+                <br>
+                <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+                the tallest planetary mountain in our solar system. It’s two and a half times
+                the size of Everest!</p>
+                <br>
+                <p>
+                Avg. distance
+                225 mil. km
+                </p>
+                <br>
+                <p>
+                Est. travel time
+                9 months
+                </p>
+                <br>
+            </div>
+            <li class="accordion-item" id="Europa">
+                Europa
+                <img class="img"  src="./assets/shared/icon-hamburger.svg" alt="">
+            </li>
+            <div class="output" id="europa-output">
+                <h3>Europa</h3>
+                <br>
+                <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+                winter lover’s dream. With an icy surface, it’s perfect for a bit of
+                ice skating, curling, hockey, or simple relaxation in your snug
+                wintery cabin.</p>
+                <br>
+                <p>
+                Avg. distance
+                628 mil. km
+                </p>
+                <br>
+                <p>
+                Est. travel time
+                3 years
+                </p>
+                <br>
+            </div>
+            <li class="accordion-item" id="Titan">
+                Titan
+                <img class="img"  src="./assets/shared/icon-hamburger.svg" alt="">
+            </li>
+            <div class="output" id="titan-output">
+                <h3>Titan</h3>
+                
+                <p>The only moon known to have a dense atmosphere other than Earth, Titan
+                is a home away from home (just a few hundred degrees colder!). As a
+                bonus, you get striking views of the Rings of Saturn.</p>
+                <br>
+                <p>
+                Avg. distance
+                1.6 bil. km
+                </p>
+                <br>
+                <p>
+                Est. travel time
+                7 years
+                </p>
+            </div>
+        </ul>
+    </div>
+    <script src="DOM.js"></script>
+    <script>
+        //accordion
+        const accordionItems = elements('.accordion-item');
+        accordionItems.forEach(item => {
+            click(item, () => {
+                let output = item.nextElementSibling
+                if (output.style.display == 'none') {
+                    setDisplay(output, 'block');
+                } else {
+                    hide(output);
+                }
+            })
+        })
+        //global
+        let hamburg = element('#hamburg');
+        let nav = element('nav');
+        hamburg.addEventListener('click', () => {
+            if (nav.style.display == 'none') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        })
+    </script>
+</body>
+
+</html>
