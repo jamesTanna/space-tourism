@@ -28,7 +28,7 @@ hr{
 #nav, .nav{
     display: flex;
     align-items: center;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(70px);
     padding: 0 5px;
 }
 .nav-link{
