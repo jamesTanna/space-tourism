@@ -34,7 +34,7 @@ let server = http.createServer((req, res) => {
             contentType = 'image/webpg';
             break;
         case '.svg':
-            contentType = 'image/svg';
+            contentType = 'image/svg+xml';
             break;
         default:
             break;
