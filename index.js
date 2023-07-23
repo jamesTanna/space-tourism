@@ -30,8 +30,8 @@ let server = http.createServer((req, res) => {
         case '.jpg':
             contentType = 'image/jpg';
             break;
-        case '.webpg':
-            contentType = 'image/webpg';
+        case '.webp':
+            contentType = 'image/webp';
             break;
         case '.svg':
             contentType = 'image/svg+xml';
