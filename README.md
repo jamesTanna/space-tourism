@@ -1,5 +1,5 @@
 # Space Tourism Website
-## Project by [Frontend Mentor](www.frontendmentor.io)
+## Project by [Frontend Mentor](https://www.frontendmentor.io)
 ## [Click me](https://puce-busy-cormorant.cyclic.app/index.html) to visit website.
 
 My second static project
